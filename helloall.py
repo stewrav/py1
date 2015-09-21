@@ -1,7 +1,7 @@
 # Hello all
 
-everyone = ['mum', 'dad', 'boy', 'girl', 'dog', 'cat']
+everyone = ['mum', 'dad', 'boy', 'girl', 'dog', 'cat',"guinea pig","chicken"]
 
-for mammal in everyone:
-    print('Hello', mammal)
+for familymember in everyone:
+    print('Hello', familymember)
     
