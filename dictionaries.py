@@ -1,5 +1,5 @@
 dad = 'Stewart'
-fam = { 'man':dad, 'woman':'mum', 'boy':'ollie' }
+fam = { 'man':dad, 'woman':'mum', 'youngest boy':'ollie', 'girl':'berry','eldest boy':'eddie' }
 
 # To just list the keys:
 #for item in fam:
@@ -9,4 +9,4 @@ fam = { 'man':dad, 'woman':'mum', 'boy':'ollie' }
 # Iterate through each key in the dictionary,
 # displaying the key and its value
 for key,value in fam.items():
-	print( 'The', key, 'is', value )
+	print ("it's the", key, "and it's name is", value)
