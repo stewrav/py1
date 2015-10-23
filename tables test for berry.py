@@ -6,6 +6,8 @@ from random import randint
 tables = [2,3,6]
 tables2 = range(1,13)
 
+numcor = 0
+
 nq=5
 
 for question_num in range (0,nq):
@@ -23,7 +25,14 @@ for question_num in range (0,nq):
 	ans = int(input())
 	if ans == x*y:
 		print("you were correct!")
+		numcor = numcor + 1
 	
 	else:
 		print("you were wrong! The answer was",x*y)
+	
+
+print ("you got",numcor,"out of",nq)
+
+if numcor == nq:
+	print ("You got all the questions correct! Well done!")
 	
