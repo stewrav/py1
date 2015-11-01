@@ -3,6 +3,9 @@
 # Import randint function
 from random import randint
 
+# Import monotonic function
+import time
+
 # Numbers for left-hand side
 table1 = [ 2, 3, 6 ]
 
@@ -11,6 +14,12 @@ table2 = range( 1, 13 )
 
 # Say how many questions there will be
 numq = 3
+
+# Count how many correct
+numcorrect = 0
+
+# Note the time
+start_time = time.monotonic()
 
 # Loop through the questions
 for question_number in range(0,numq):
@@ -38,6 +47,14 @@ for question_number in range(0,numq):
 	# Check the answer
 	if answer == z:
 		print("Correct!")
+		numcorrect += 1
 	else:
 		print("Wrong")
 
+# Note the time
+end_time = time.monotonic()
+
+if (numcorrect == numq):
+	print("Perfect!")
+
+print("You scored", numcorrect, "out of", numq, "(in", int(0.5 + end_time - start_time), "seconds)")
