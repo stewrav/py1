@@ -1,8 +1,7 @@
 import time
 
-x = time.monotonic()
-#x = time.CLOCK_MONOTONIC
-print( "x ==", x )
+start_time = time.monotonic()
+print( "start_time ==", start_time )
 
 time.sleep(1)
 
