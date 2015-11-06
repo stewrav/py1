@@ -18,6 +18,9 @@ numq = 3
 # Count how many correct
 numcorrect = 0
 
+# Maximum number of silly guesses
+max_attempts = 2
+
 # Note the time
 start_time = time.monotonic()
 
@@ -36,20 +39,31 @@ for question_number in range(0,numq):
 	z = x * y
 	#print( "z ==", z )
 
-	# Ask the question
-	print( "What is", x, "times", y, "?" )
-	answer_string = input()
+	attempts = 0
+	while attempts < max_attempts:
+	
+		# Increment the attempt counter
+		attempts += 1
 
-	# Turn the answer into a number
-	answer = int( answer_string )
-	#print( "answer ==", answer )
+		# Ask the question
+		print( "What is", x, "times", y, "?" )
+		answer_string = input()
 
+		# Try to turn the answer into a number
+		try:
+			answer = int( answer_string )
+			break
+		except:
+			print( "Your answer (", answer_string, ") isn't sensible\n" )
+			answer = 0
+	
 	# Check the answer
 	if answer == z:
 		print("Correct!")
 		numcorrect += 1
 	else:
 		print("Wrong")
+	print("\n")
 
 # Note the time
 end_time = time.monotonic()
