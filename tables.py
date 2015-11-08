@@ -25,7 +25,7 @@ max_attempts = 2
 start_time = time.monotonic()
 
 # Loop through the questions
-for question_number in range(0,numq):
+for question_number in range(1,numq+1):
 
 	# Give me a random index between 0 (start) and len-1 (end)
 	x_index = randint( 0, len(table1)-1 )
@@ -46,14 +46,15 @@ for question_number in range(0,numq):
 		attempts += 1
 
 		# Ask the question
-		print( "What is", x, "times", y, "?" )
+		print( "(", question_number, ") What is ", x, " times ", y, "?", sep="" )
 		answer_string = input()
 
 		# Try to turn the answer into a number
 		try:
 			answer = int( answer_string )
 			break
-		except:
+
+		except ValueError:
 			print( "Your answer (", answer_string, ") isn't sensible\n" )
 			answer = 0
 	
