@@ -13,7 +13,7 @@ nq=5
 
 start_time = time.monotonic()
 
-
+max_attempts = 2
 
 
 for question_num in range (0,nq):
@@ -22,13 +22,25 @@ for question_num in range (0,nq):
 	y_index=randint(0,len(tables2)-1)
 	x=tables[x_index]
 	y=tables2[y_index]
+	
+	attempts = 0
+	
+	while attempts < max_attempts:
+		attempts = attempts+1
+		
 
-
-	print ("what is",x,"times",y,"?")
+		print ("what is",x,"times",y,"?")
 
 	#work out the answer!
-
-	ans = int(input())
+		try:
+			ans = int(input())
+			break
+		except ValueError:
+			print ("that answer wasn't sensible")
+			ans=0
+			
+		
+		
 	if ans == x*y:
 		print("you were correct!")
 		numcor = numcor + 1
