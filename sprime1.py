@@ -1,7 +1,7 @@
 # Prime numbers
 
 # Test these numbers
-for i in range(2,100):
+for i in range(2,100000):
 
 	# Test factors
 	for j in range(2,i):
@@ -11,8 +11,9 @@ for i in range(2,100):
 
 			# then skip to next number
 			break
+
 	# If got to here then did not break
 	else:
-		# So we had no factors
+	
+		# So we had no factors, hence prime
 		print(i)
-
