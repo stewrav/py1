@@ -8,7 +8,7 @@ dp = 5  # number of decimal places to use
 tolerance = 10 ** (-1 * dp)
 
 # Find square roots of the following numbers
-for i in range(2,101):
+for i in range(2,100001):
 
 	print("Number ==", i)
 
