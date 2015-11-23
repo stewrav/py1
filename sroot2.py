@@ -1,9 +1,13 @@
 # sroot2.py
 
 debug = 0
-tolerance = 0.00001
-rounding = 5
+dp = 5  # number of decimal places to use
 
+# Derive tolerance from dp
+# as tolerance = 1x10e(-dp)
+tolerance = 10 ** (-1 * dp)
+
+# Find square roots of the following numbers
 for i in range(2,101):
 
 	print("Number ==", i)
@@ -11,9 +15,7 @@ for i in range(2,101):
 	# Start with some initial guesses
 	lo_guess = 0
 	hi_guess = i
-	guess = (lo_guess + hi_guess)/2
-	test = guess ** 2
-
+	
 	# Keep looping until we are within tolerance
 	while True:
 
@@ -27,16 +29,25 @@ for i in range(2,101):
 		if debug: print("guess ==", guess)
 		if debug: print("test ==", test)
 
-		if(test+tolerance > i and test-tolerance < i):
-			# We are within tolerance
+		# If we are within tolerance
+		if(test - tolerance < i < test + tolerance):
+			# then break out of the loop for this number
 			break
+			
+		# If the test shows that our guess is too low
 		elif(test < i):
+			# then set the lower boundary to be the current guess
 			if debug: print("Too low")
 			lo_guess = guess
+			
+		# If the test shows that our guess is too high
 		else:
+			# then set the upper boundary to be the current guess
 			if debug: print("Too high")
 			hi_guess = guess
+			
+		# Show a blank line if we are in debug mode
 		if debug: print()
 
-	print("square root ==", round(guess,rounding), "\n")
-
+	# Show the result for this number
+	print("square root ==", round(guess,dp), "\n")
