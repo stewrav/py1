@@ -16,5 +16,5 @@ def part_fib( start, end ):
 		if curr > end:    return
 		if curr >= start: yield curr
 
-for i in part_fib( 1, 20 ):
+for i in part_fib( 1, 1346270 ):
 	print( i )
