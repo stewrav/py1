@@ -1,6 +1,6 @@
 import hashlib
 
-secret = "open sesame"
+secret = "t"
 encoded_secret = secret.encode('utf-8')
 hashed = hashlib.md5(encoded_secret).hexdigest()
 
