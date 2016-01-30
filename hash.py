@@ -9,3 +9,4 @@ def show_pw_and_hash(secret):
 show_pw_and_hash("open sesame")
 show_pw_and_hash("t")
 show_pw_and_hash("sr")
+show_pw_and_hash("abCd3Fgh")
