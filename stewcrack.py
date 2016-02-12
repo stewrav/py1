@@ -43,17 +43,19 @@ for g1 in printable:
 answer="fc45ed5aa04ed400b192101a11f5e580"
 
 # 1
+print("Trying 1 character passwords...")
 for g1 in printable:
 	if guess_correct(g1):
 		quit()
-
 # 2
+print("Trying 2 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		if guess_correct(g1+g2):
 			quit()
 
 # 3
+print("Trying 3 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
@@ -61,6 +63,7 @@ for g1 in printable:
 				quit()
 
 # 4
+print("Trying 4 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
@@ -69,6 +72,7 @@ for g1 in printable:
 					quit()
 
 # 5
+print("Trying 5 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
@@ -78,6 +82,7 @@ for g1 in printable:
 						quit()
 
 # 6
+print("Trying 6 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
@@ -88,6 +93,7 @@ for g1 in printable:
 							quit()
 
 # 7
+print("Trying 7 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
@@ -99,6 +105,7 @@ for g1 in printable:
 								quit()
 
 #8
+print("Trying 8 character passwords...")
 for g1 in printable:
 	for g2 in printable:
 		for g3 in printable:
